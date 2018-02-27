@@ -46,14 +46,15 @@
                 }
                 ,nodes: [ //节点
                     {
-                        name: '常用文件夹'
+                        name: '省移动公司'
                         ,id: 1
                         ,alias: 'changyong'
+                        ,spread: true
                         ,children: [
                             {
-                                name: '所有未读（设置跳转）'
+                                name: '拓维信息'
                                 ,id: 11
-                                ,href: 'http://www.layui.com/'
+                                ,href: "javascript:$('#sc_body').load('agentInfo.html')"
                                 ,alias: 'weidu'
                             }, {
                                 name: '置顶邮件'
@@ -66,7 +67,6 @@
                     }, {
                         name: '我的邮箱'
                         ,id: 2
-                        ,spread: true
                         ,children: [
                             {
                                 name: 'QQ邮箱'
@@ -141,8 +141,15 @@
                     }
                 ]
             });
-
+            $("cite").css({"font-weight":"normal","color":"#ccccc","font-size":"13px"});
+            $("cite:parent").click(
+                function () {
+                    $("cite").css({"font-weight":"normal","color":"#ccccc","font-size":"13px"});
+                    $(this).css({"font-weight":"bold","font-size":"15px"});
+                }
+            );
         });
+
     </script>
     <title>siteCMS站点管理框架</title>
 </head>
@@ -231,19 +238,6 @@
             </div>
             <div class="layui-tab-item">
                 <menu class="sc_side_main">
-                    <ul class="layui-nav layui-nav-tree" style="background-color:inherit;" lay-filter="test">
-                        <li class="layui-nav-item">
-                            <a data-title="广西省移动公司">广西省移动公司</a>
-                            <dl class="layui-nav-child">
-                                <dd>
-                                    <a href="javascript:void">&nbsp;&nbsp;&nbsp;&nbsp;├ 拓维信息</a>
-                                </dd>
-                                <dd>
-                                    <a href="javascript:void">&nbsp;&nbsp;&nbsp;&nbsp;├ 信元信息</a>
-                                </dd>
-                            </dl>
-                        </li>
-                    </ul>
                     <ul id="demo1"></ul>
                     <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
 
@@ -261,7 +255,7 @@
             </div>
         </div>
     </div>
-    <div class="layui-body" id="sc_body">
+    <div class="layui-body" id="sc_body" style="margin: auto">
         <div class="sc_body">
             <div class="sc_title sc_body_title">
                 <h5>系统首页</h5>

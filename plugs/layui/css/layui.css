@@ -2762,11 +2762,19 @@ body .layui-table-tips .layui-layer-content {
 	width: 100%;
 	line-height: 45px
 }
-.layui-tree li:hover
-{
-	background-color: #009688;
-	background-size: 9px 6px;
-}
+/*.layui-tree li:focus*/
+/*{*/
+	/*background-color: #ffffff;*/
+/*}*/
+/*.layui-tree>li>ul>li:hover{*/
+	/*background-color: #F2F2F2;*/
+/*}*/
+/*.layui-tree>li>ul>li>ul>li:hover{*/
+	/*background-color: #ffffff;*/
+/*}*/
+/*.layui-tree>li>ul>li>ul>li>ul>li:hover{*/
+	/*background-color: #f2f2f2;*/
+/*}*/
 .layui-tree li .layui-tree-spread,
 .layui-tree li a {
 	display: inline-block;

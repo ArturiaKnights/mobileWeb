@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .layui-form-item{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    </style>
+    <script>
+        $("#add").click(
+            function () {
+                layer.open({
+                    type: 2,
+                    title: false, //不显示标题
+                    area: ['1020px', '840px'], //宽高
+                    content: '修改代理商.html', //这里content是一个普通的String
+                });
+            }
+        );
+    </script>
+</head>
+<body>
+<div class="sc_title sc_body_title">
+    <h5>代理商信息</h5>
+    <div class="sc_title_btn">
+        <button class='layui-btn layui-btn-sm' data-title="新增" id="add"><i class="layui-icon">&#xe62a;</i> 修改代理商</button>
+        <button class='layui-btn layui-btn-sm' data-title="新增"><i class="layui-icon">&#x1006;</i> 删除代理商</button>
+        <button class='layui-btn layui-btn-sm' data-title="新增"><i class="layui-icon">&#xe654;</i> 导入代理商</button>
+        <button class='layui-btn layui-btn-sm' data-title="新增"><i class="layui-icon">&#xe615;</i> 查询代理商</button>
+    </div>
+</div>
+<form class="layui-form" action="" style="margin-left:40px;margin-top: 70px">
+    <fieldset class="layui-elem-field site-demo-button" style="margin-top: 30px;">
+        <legend>代理商基本资料</legend>
+        <div class="layui-form-item" style="padding-left: 20px;padding-top: 15px">
+            <div class="layui-inline">
+                <label class="layui-form-label">代理商编号</label>
+                <div class="layui-input-inline">
+                    <input type="number" name="phone" lay-verify="required|phone" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">代理商名称</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="email" lay-verify="email" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">登录用户名</label>
+                <div class="layui-input-inline">
+                    <input type="tel" name="phone" lay-verify="required|phone" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">登录密码</label>
+                <div class="layui-input-inline">
+                    <input type="password" name="email" lay-verify="email" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item" >
+            <div class="layui-inline">
+                <label class="layui-form-label">代理商级别</label>
+                <div class="layui-input-inline">
+                    <input type="tel" name="phone" lay-verify="required|phone" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">所属上级组织</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="email" lay-verify="email" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">所属地区</label>
+                <div class="layui-input-inline">
+                    <input type="tel" name="phone" lay-verify="required|phone" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+
+            <div class="layui-inline">
+                <label class="layui-form-label">联系人姓名</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="email" lay-verify="email" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">联系人号码</label>
+                <div class="layui-input-inline">
+                    <input type="number" name="email" lay-verify="email" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">E-mail</label>
+                <div class="layui-input-inline">
+                    <input type="email" name="email" lay-verify="email" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">加入日期</label>
+                <div class="layui-input-inline">
+                    <input type="date" name="date" lay-verify="email" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">联系地址</label>
+            <div class="layui-input-block">
+                <input type="text" name="identity" lay-verify="identity" placeholder="" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item" style="padding-left: 20px">
+            <label class="layui-form-label">代理商描述</label>
+            <div class="layui-input-block">
+                <input type="text" name="identity" lay-verify="identity" placeholder="" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+    </fieldset>
+    <fieldset class="layui-elem-field site-demo-button">
+        <legend>代理商结算信息</legend>
+        <div class="layui-form-item" style="padding-left: 20px;padding-top: 15px">
+            <div class="layui-inline">
+                <label class="layui-form-label">开户银行</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="phone" lay-verify="required|phone" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">开户支行</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="email" lay-verify="email" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">开户人</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="phone" lay-verify="required|phone" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">银行帐号</label>
+                <div class="layui-input-inline">
+                    <input type="number" name="email" lay-verify="email" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset class="layui-elem-field site-demo-button">
+        <legend>代理商业务信息</legend>
+        <div class="layui-form-item" style="padding-left: 20px;padding-top: 15px">
+            <div class="layui-inline">
+                <label class="layui-form-label">下级代理商数</label>
+                <div class="layui-input-inline">
+                    <input type="number" name="phone" lay-verify="required|phone" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">发展业务数</label>
+                <div class="layui-input-inline">
+                    <input type="number" name="email" lay-verify="email" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">用户发展数</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="phone" lay-verify="required|phone" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">累计佣金</label>
+                <div class="layui-input-inline">
+                    <input type="number" name="email" lay-verify="email" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+</form>
+</body>
+</html>`
