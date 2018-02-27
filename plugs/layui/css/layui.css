@@ -2757,9 +2757,16 @@ body .layui-table-tips .layui-layer-content {
 .layui-tree li {
 	text-overflow: ellipsis;
 	overflow: hidden;
-	white-space: nowrap
+	white-space: nowrap;
+	display: block;
+	width: 100%;
+	line-height: 45px
 }
-
+.layui-tree li:hover
+{
+	background-color: #009688;
+	background-size: 9px 6px;
+}
 .layui-tree li .layui-tree-spread,
 .layui-tree li a {
 	display: inline-block;
@@ -2775,18 +2782,20 @@ body .layui-table-tips .layui-layer-content {
 }
 
 .layui-tree li a i {
-	font-size: 16px
+	font-size: 16px;
+	display: none;
 }
 
 .layui-tree li a cite {
 	padding: 0 6px;
-	font-size: 14px;
+	font-size: 13px;
+	color: #333333;
 	font-style: normal
 }
 
 .layui-tree li i {
 	padding-left: 6px;
-	color: #333;
+	color: #ccc;
 	-moz-user-select: none
 }
 
